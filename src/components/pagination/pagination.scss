@@ -1,0 +1,35 @@
+@import 'src/styles/_colors';
+
+
+.pagination_container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color:$gris;
+    
+    
+
+    button{
+        background-image: url("/assets/arrow.png");
+        background-color: transparent;
+        border: 0;
+        background-repeat: no-repeat;
+        width: 28px;
+        height: 27px;
+        cursor: pointer;
+
+        &.disable{
+            pointer-events: none;
+            opacity: .4;
+        }
+        &:last-child{
+            transform: rotate(180deg);
+        }
+    }
+
+    .page_color span{
+        font-weight: 600;
+    }
+}
+
+   

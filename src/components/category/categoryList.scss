@@ -1,0 +1,48 @@
+@import 'src/styles/_colors';
+
+.ca_list{
+    display: flex;
+    align-items: center;
+
+    .ca_text{
+        margin-right: 10px;
+        color: $gris;
+    }
+    
+    .categories_container {
+        display: flex;
+        gap: 10px;
+
+        .ca_option{
+            cursor: pointer;
+            min-width: 100px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background: #0f0e13;
+            border: 2px solid $baseColor;
+            box-sizing: border-box;
+            transition: .4s;
+
+            &:hover{
+                background: #131218;
+            }
+        }
+    
+        .active {
+            min-width: 100px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background: $baseColorGradient;
+            border: 0;
+            &:hover{
+                background: $baseColorGradientHover;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+
+@font-face {
+    font-family: 'GothicOutline';
+    src: local('GothicOutline'), url(../assets/fonts/GothicOutline.otf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'HelveticaInseratRoman';
+    src: local('HelveticaInseratRoman'), url(../assets/fonts/HelveticaInseratRoman.otf) format('truetype');
+}
+
+
+#detach-button-host {
+    display: none !important;
+}
+
+body{   
+    background: #16161e;
+    font-family: 'IBM Plex Serif', serif;
+    color: #fafafc;
+    margin: 0;
+}

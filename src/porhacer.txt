@@ -1,0 +1,17 @@
+- estilo Botón eliminar
+- maximo de busquedas 3
+
+- botón favoritos
+- pestaña favoritos
+- agregar gifs a favoritos
+- localstorage favoritos
+
+
+- responsive header
+- animaciones header
+
+- pantalla inicio
+- sacar paginación cuando no hay nada
+
+- footer
+
