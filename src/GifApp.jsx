@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Footer } from './components/footer/Footer';
 import { GifWrapper } from './components/gifGrid/GifWrapper';
 import { Header } from './components/header/Header';
 import AppContext from './context/categoryContext';
@@ -13,6 +14,7 @@ export const GifApp = () => {
     <AppContext>
       <Header/>
       <GifWrapper/>
+      <Footer/>
     </AppContext>
     </>
   );

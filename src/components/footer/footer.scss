@@ -1,0 +1,27 @@
+@import 'src/styles/_colors';
+
+footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 5px 5px 0 0 ;
+    text-align: center;
+    position: relative;
+    background-color: rgba(0,0,0,.6);
+    gap: 10px;
+    justify-content: center;
+
+    
+    color: $gris;
+    font-family: 'Roboto', sans-serif;
+    font-size: .8em;
+
+    a{
+        color: $baseColor;
+        &:hover{
+            color:$baseColorHover;
+        }
+    }
+}

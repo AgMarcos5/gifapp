@@ -4,7 +4,7 @@ import './categoryList.scss'
 
 export const CategoryList = () => {
 
-    const {categories,selectedCategory,removeCategory,changeCategory} = useCategories();
+    const {categories,selectedCategory,removeCategory,resetCategories, changeCategory} = useCategories();
 
   return (
     <div className='ca_list'>
@@ -12,12 +12,13 @@ export const CategoryList = () => {
       <div className="categories_container">
               {categories.map(option => 
                 <>
-                  <div key={option} className={`ca_option ${option === selectedCategory ? 'active' : ''}`} onClick={() => changeCategory(option)}>
-                      <span>{option}</span> 
+                  <div key={option} className={`ca_option ${option === selectedCategory ? 'active' : ''}`} >
+                      <div className="option_text" onClick={() => changeCategory(option)}>{option}</div> 
+                      <div className="close" onClick={() => removeCategory(option)}></div>
                   </div>
-                  <div onClick={() => removeCategory(option)}>eliminar</div>
                 </>
               )}
+              <div className="reset" onClick={resetCategories}><span>borrar todos</span></div>
       </div>
     </div>
   )

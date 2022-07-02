@@ -1,11 +1,9 @@
 import React from 'react'
-import img from '../../assets/nohaygifs.jpg'
+import img from '../../assets/nohaygifs.png'
 
 export const NoGifs = () => {
   return (
-    <div style={{
-        "textAlign": "center"
-    }}>
+    <div className="nogifs">
         <img src={img} />
     </div>
   )

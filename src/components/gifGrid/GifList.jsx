@@ -14,9 +14,6 @@ export const GifList = ({category, active, page, setPage, setLastPage}) => {
     }
   },[active,pages])
 
-  console.log(loading, data.length)
-
-
   return (
     <>
         <div className={`gif_grid masonry ${category === active ? 'active' : ''}`}>

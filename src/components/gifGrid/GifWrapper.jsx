@@ -17,13 +17,13 @@ export const GifWrapper = () => {
 
   return (
     <section className='gif_container'>
-        <Navbar page={page} setPage={setPage} lastPage={lastPage}/>
+        <Navbar page={page} setPage={setPage} lastPage={lastPage} selectedCategory={selectedCategory}/>
         {selectedCategory ?(
           <>
           
           {
             categories.map( category => (
-              <GifList category={category} active={selectedCategory} page={page} setPage={setPage} setLastPage={setLastPage}/>
+              <GifList key={category} category={category} active={selectedCategory} page={page} setPage={setPage} setLastPage={setLastPage}/>
             ))
           }
           </>
@@ -31,32 +31,6 @@ export const GifWrapper = () => {
         (
           <NoGifs/>
         )}
-        
-     
-    
-      
     </section>
   )
 }
-
-/*
-return (
-    <section className='gif_container'>
-    {
-      categories.length > 0 ? 
-      (
-      <>
-        <Navbar page={page} setPage={setPage} lastPage={lastPage}/>
-        {
-          categories.map( category => (
-            <GifList category={category} active={selectedCategory} page={page} setPage={setPage} setLastPage={setLastPage}/>
-          ))
-        }
-      </>  
-      ) : 
-      (<GifList category="random" active={selectedCategory} page={page} setPage={setPage} setLastPage={setLastPage}/>)
-    }
-      
-    </section>
-  )
-*/

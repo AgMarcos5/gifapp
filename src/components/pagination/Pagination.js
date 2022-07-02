@@ -7,15 +7,11 @@ export const Pagination = ({page, setPage, lastPage}) => {
         if(page>1){
             setPage(page-1)
         }
-        
-        console.log(page)
     }
 
     const nextPage = () => {
         if(page<lastPage){
             setPage(page+1)
-            
-        console.log(page)
         }
         
     }
