@@ -1,5 +1,36 @@
+@import 'src/styles/_colors';
 nav{
     font-family: 'Roboto', sans-serif;
     font-size: .8em;
     justify-content: space-between;
+    background: #060608;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    .nav_buttons{
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        height: 100%;
+        align-items: stretch;
+
+        .favs{
+            cursor: pointer;
+            background: #0b0a0e;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            
+            a{
+                color: #cf9a4b;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    }
 }
+

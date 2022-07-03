@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import useCategories from "../../hooks/useCategories";
 import './addCategory.scss'
 
 export const AddCategory = () => {
+
+    const navigate = useNavigate(); 
 
     const {addCategory} = useCategories();
 
@@ -18,6 +21,7 @@ export const AddCategory = () => {
         if(value < 1) return;
         addCategory(value);
         setInputValue('');
+        navigate("/");
     }
 
   return (

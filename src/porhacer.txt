@@ -1,8 +1,3 @@
-- maximo de busquedas 3
-- borrar todos
-
-- botón favoritos
-- pestaña favoritos
 - agregar gifs a favoritos
 - localstorage favoritos
 

@@ -24,14 +24,10 @@ export default function AppContext ({children}) {
 
     const handleAddCategory = (value) => {
         if(categories.length === 3){
-            console.log("hay 3 categorias",categories)
             setCategories(categories => {
                 const sliceCategories = categories.slice(0,-1); 
-                console.log("slice",sliceCategories)
-
                 return [value,...sliceCategories];
             })
-            console.log("despues del slice",categories)
         }
         else{
             setCategories([value,...categories])

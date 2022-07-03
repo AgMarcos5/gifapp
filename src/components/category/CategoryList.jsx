@@ -1,6 +1,7 @@
 import React from 'react'
 import useCategories from '../../hooks/useCategories';
 import './categoryList.scss'
+import {Link} from 'react-router-dom'
 
 export const CategoryList = () => {
 
@@ -13,12 +14,15 @@ export const CategoryList = () => {
               {categories.map(option => 
                 <>
                   <div key={option} className={`ca_option ${option === selectedCategory ? 'active' : ''}`} >
-                      <div className="option_text" onClick={() => changeCategory(option)}>{option}</div> 
+                      <Link to="/">
+                          <div className="option_text" onClick={() => changeCategory(option)}>{option}</div> 
+                      </Link>
                       <div className="close" onClick={() => removeCategory(option)}></div>
                   </div>
+                  
                 </>
               )}
-              <div className="reset" onClick={resetCategories}><span>borrar todos</span></div>
+              {categories.length > 0 && <div className="reset" onClick={resetCategories}><span>borrar todos</span></div>}
       </div>
     </div>
   )

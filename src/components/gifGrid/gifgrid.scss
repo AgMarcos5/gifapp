@@ -1,19 +1,5 @@
 @import 'src/styles/_colors';
 
-.gif_container{
-    max-width: 1200px;
-    
-    margin: 0 auto;
-    background: #0e0e12;
-    position: relative;
-    top: -50px;
-    box-shadow: 0px 0px 10px 2px #16161e;
-    
-    padding-bottom: 10px;
-    border-radius: 0 0 5px 5px;
-}
-
-
 .gif_grid{
     margin: 0 10px ;
     display: none;
@@ -38,18 +24,4 @@
         color: $gris;
         font-family: 'HelveticaInseratRoman';
     }
-}
-
-nav{
-    background: #060608;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nogifs{
-    background-image: url("/assets/background.png");
-    background-position: top center;
-    text-align: center;
 }
