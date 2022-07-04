@@ -9,7 +9,7 @@ export const Navbar = ({page,setPage,lastPage,selectedCategory, changeCategory})
   return (
     <nav>
         <div className='nav_buttons'>
-          <div className='favs' onClick={() => changeCategory(null)}><Link to="/favourites">Favoritos <img src={favoritos} alt="favoritos"/></Link></div>
+          <div className='favs' onClick={() => changeCategory(null)}><Link to="/favourites"><span>Favoritos</span> <img src={favoritos} alt="favoritos"/></Link></div>
           <CategoryList/>
         </div>
         { selectedCategory && <Pagination page={page} setPage={setPage} lastPage={lastPage}/> }

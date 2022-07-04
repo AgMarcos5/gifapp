@@ -1,0 +1,43 @@
+.gif_item{
+    display: table-footer-group;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    width: 100%;
+
+    .hover_button{
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, rgba(28,28,36,0) 16%, rgba(14,14,18,1) 100%);
+        opacity: 0;
+        transition: 1s;
+
+        img{
+            width: 40px;
+            max-width: 40px;
+            opacity: .9;
+        }
+    }
+
+    &:hover {
+        .hover_button{
+            opacity: 1;
+        }
+        .gif_image{
+            transform: scale(1.5);
+        }
+    }
+
+    .gif_image{
+        margin: 0 auto;
+        position: absolute;
+        height: 100%;
+        min-width: 100%;
+        transition: 1s;
+    }
+}

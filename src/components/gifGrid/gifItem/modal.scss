@@ -1,0 +1,127 @@
+@import 'src/styles/_colors';
+
+.modal{
+    width: 100vw;
+    height: 100vh;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    .modal_background{
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background: rgba(0,0,0,.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal_container{
+        
+        font-family: 'Roboto', sans-serif;
+        max-width: min(500px,80vw);
+        min-height: 100px;
+        background: #0e0e12;
+        position: relative;
+        border-radius: 15px;
+        box-shadow: rgb(5 5 6 / 20%) 0 7px 29px 0;
+        overflow: hidden;
+
+        .title{
+            gap: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            .title_info{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            h3{
+                font-weight: 300;
+                text-transform: uppercase;
+                font-size: 1em;
+            }
+        }
+
+        .close_button{
+            button{
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                gap: 20px;
+                border: 2px solid $gris;
+                border-radius: 50px;
+                background: transparent;
+                color: $gris;
+                padding: 5px;
+                transition: .5s;
+            }
+            svg{
+                fill: $grisClaro;
+                width: 15px;
+                height: 15px;
+            }
+            &:hover{
+                transform: scale(1.05);
+                button{
+                    border-color: $baseColorHover;
+                }
+                svg{
+                    fill: $grisClaro;
+                }
+            }
+            &:active{
+                transform: rotate(15deg);
+            }
+        }
+        
+        .fav_button{
+            button{
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+                gap: 20px;
+                border: 2px solid $gris;
+                border-radius: 50px;
+                background: transparent;
+                color: $gris;
+                padding: 5px;
+                transition: .5s;
+                svg{
+                    fill: $grisClaro;
+                    width: 15px;
+                }
+
+                &:hover{
+                    transform: rotate(15deg) scale(1.05);
+                    svg{
+                        fill: $favColor;
+                    }
+                }
+                &:active{
+                    transform: rotate(15deg) scale(.6);
+                }
+            
+                &.remove{
+                    border-color: $favColor;
+                    color: $favColor;
+                    svg{
+                        fill: $favColor2;
+                    }
+                }
+            }
+        }
+
+        .modal_gif{
+            display: flex;
+            width: 100%;
+        }
+    }
+}

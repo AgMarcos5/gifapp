@@ -1,8 +1,5 @@
-- agregar gifs a favoritos
-- localstorage favoritos
-
-
-- responsive header
 - animaciones header
-
-
+- no ingresar la misma búsqueda más de una vez
+-texto cargando
+- favicon
+- meta tags

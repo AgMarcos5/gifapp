@@ -24,13 +24,36 @@ nav{
             align-items: center;
             
             a{
-                color: #cf9a4b;
+                color: $favColor;
                 text-decoration: none;
                 display: flex;
                 align-items: center;
                 gap: 5px;
+                transition: .5s;
+                img{
+                    transition: .5s;
+                    transform: scale(.9);
+                }
+
+                &:hover{
+                    color: $favColorHover;
+                    img{
+                        transform: rotate(15deg) scale(1);
+                    }
+                }
+                &:active{
+                    img{
+                        transform: scale(.9);
+                    }
+                }
             }
         }
     }
 }
 
+@media (max-width:784px)
+{
+    .ca_text, .page, .favs span{
+        display: none;
+    }
+}

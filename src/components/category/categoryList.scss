@@ -8,6 +8,21 @@
         margin-right: 10px;
         color: $gris;
     }
+
+    .categories_mobile{
+        display: none;
+        cursor: pointer;
+        color:$gris;
+        padding: 10px 0;
+        width: 120px;
+        outline: 1px solid $baseColor;
+        justify-content: center;
+        border-radius: 50px;
+
+        &:hover{
+            color:$grisClaro;
+        }
+    }
     
     .categories_container {
         display: flex;
@@ -81,5 +96,28 @@
             }
         }
 
+    }
+}
+
+@media (max-width:784px)
+{
+    .categories_mobile{
+        display: flex !important;
+    }
+    .categories_container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 50px;
+        z-index: 2;
+        background: #060608;
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+        align-items: center;
+
+        &.hide{
+            
+        display: none !important;
+        }
     }
 }

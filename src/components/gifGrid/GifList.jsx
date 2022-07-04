@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import useApi from '../../hooks/useApi';
-import { GifItem } from './GifItem';
+import { GifItem } from './gifItem/GifItem';
 import { NoGifs } from './NoGifs';
 
 export const GifList = ({category, active, page, setPage, setLastPage}) => {
   
   const {data, loading, pages, maxGifs} = useApi(category);
+
 
   useEffect( () => {
     if(active === category){
@@ -27,6 +28,7 @@ export const GifList = ({category, active, page, setPage, setLastPage}) => {
             .map( img => (
               <GifItem 
                 key={img.id}
+                id={img.id}
                 title={img.title} 
                 url={img.url}
               />

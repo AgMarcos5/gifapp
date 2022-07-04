@@ -17,4 +17,7 @@
     background-image: url("/assets/background.png");
     background-position: top center;
     text-align: center;
+    img{
+        max-width: 100%;
+    }
 }
