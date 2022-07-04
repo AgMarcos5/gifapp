@@ -23,15 +23,17 @@ export default function AppContext ({children}) {
     
 
     const handleAddCategory = (value) => {
-        if(categories.length === 3){
-            setCategories(categories => {
-                const sliceCategories = categories.slice(0,-1); 
-                return [value,...sliceCategories];
-            })
-        }
-        else{
-            setCategories([value,...categories])
-        }
+        if(!categories.includes(value)){
+            if(categories.length === 3){
+                setCategories(categories => {
+                    const sliceCategories = categories.slice(0,-1); 
+                    return [value,...sliceCategories];
+                })
+            }
+            else{
+                setCategories([value,...categories])
+            }
+        }        
         setSelectedCategory(value)
     }
 
@@ -46,12 +48,12 @@ export default function AppContext ({children}) {
     }
 
     const handleResetCategories = () => {
-        setCategories( categories => {
-            const filteredCategories = categories.filter(ca => ca !== ca)
-            localStorage.setItem('categories', JSON.stringify(filteredCategories))
-            setSelectedCategory(filteredCategories[0])
-            return filteredCategories;
-        })
+        setCategories(() => {
+            let empty = [];
+            localStorage.setItem('categories', JSON.stringify(empty))
+            setSelectedCategory(empty[0])
+            return empty;
+        });
     }
 
     const state = {

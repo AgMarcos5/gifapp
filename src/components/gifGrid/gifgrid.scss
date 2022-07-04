@@ -3,13 +3,13 @@
 .gif_grid{
     margin: 0 10px ;
     display: none;
-    grid-template-columns: repeat(auto-fill,minmax(295px,1fr));
-    align-items: center;
-    justify-items: center;
     &.active{
-        display: grid;
+      display: grid;
     }
     &.masonry {
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fill,minmax(295px,1fr));
         column-count: 4;
         column-gap: 0;
         .gif_item img {
@@ -18,10 +18,5 @@
         }
       }
 
-    .loading{
-        font-weight: 100;
-        text-align: center;
-        color: $gris;
-        font-family: 'HelveticaInseratRoman';
-    }
+    
 }

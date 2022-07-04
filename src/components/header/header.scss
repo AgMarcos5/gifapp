@@ -12,9 +12,20 @@
     }
 }
 
-header{
-    background-image: url("/assets/header.jpg");
+.header{
+    background-image: url("/assets/header.jpg");    
     background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header{
+    overflow: hidden;
+    position: relative;
     text-align: center;
     font-size: 2em;
     height: 475px;    
