@@ -25,7 +25,7 @@ export const AddCategory = () => {
     }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} aria-label='form'>
       <input 
         className="search"
         type="text" 

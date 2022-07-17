@@ -23,7 +23,6 @@ export default function FavouriteContext ({children}) {
 
     const handleAddFav = (value) => {
             setFavourites([value,...favourites])
-            console.log(favourites)
     }
 
     const handleRemoveFav = (value) => {

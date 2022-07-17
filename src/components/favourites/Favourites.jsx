@@ -5,7 +5,7 @@ import { NoGifs } from '../gifGrid/NoGifs';
 
 export const Favourites = () => {
 
-  const {favourites,addFavourite} = useFavourites();
+  const {favourites} = useFavourites();
 
   return (
     <>

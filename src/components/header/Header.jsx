@@ -4,7 +4,7 @@ import './header.scss'
 import video from '../../assets/video2.mp4'
 import { AddCategory } from '../category/AddCategory'
 
-import {useViewportScroll, motion, useTransform, AnimatePresence, useMotionValue } from 'framer-motion'
+import {useViewportScroll, motion, useTransform, AnimatePresence} from 'framer-motion'
 
 export const Header = () => {
 

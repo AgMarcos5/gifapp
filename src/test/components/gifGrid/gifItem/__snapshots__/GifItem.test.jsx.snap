@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <GifItem/> Debe coincidir con el snapshot  1`] = `
+<div>
+  <div
+    class="gif_item"
+  >
+    <div
+      class="hover_button"
+    >
+      <img
+        alt="open gif"
+        src="/test-file-stub"
+      />
+    </div>
+    <img
+      alt="Dragon Ball"
+      class="gif_image"
+      data-testid="gif"
+      src="https://dragon-ball.com/goku.jpg"
+    />
+  </div>
+</div>
+`;
