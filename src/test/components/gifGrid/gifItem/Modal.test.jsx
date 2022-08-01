@@ -19,7 +19,6 @@ describe('Test en <Modal/>', () => {
      test('Debe coincidir con el snapshot ', () => {    
         
         render( <Modal title={title} url={url} id={id} /> )
-        screen.debug();
 
      });
  })

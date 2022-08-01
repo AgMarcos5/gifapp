@@ -14,13 +14,14 @@ describe('Test en <AddCategory/>', () => {
         const input = screen.getByRole("textbox");
         fireEvent.change(input, {target: {value:"Luffy"}})
         expect(input.value).toBe("Luffy")
-        //screen.debug();
+        
     })
 
     test('Debe llamar la función addCategory si el input tiene valor', () => { 
 
         const inputValue = 'Luffy';
-        useCategories.mockReturnValue({addCategory: () => {}})
+        const addCategory = jest.fn()
+        useCategories.mockReturnValue({addCategory: addCategory})
         
         
         render(<Router><AddCategory/></Router>)
@@ -29,9 +30,10 @@ describe('Test en <AddCategory/>', () => {
         
         fireEvent.change(input, {target: {value:inputValue}})
         fireEvent.submit(form);
-        //expect(addCategory).toHaveBeenCalled();
-        // https://jestjs.io/docs/jest-object#jestspyonobject-methodname
+        
+        expect(addCategory).toHaveBeenCalledWith(inputValue);
         //screen.debug();
      })
+
 
  })
