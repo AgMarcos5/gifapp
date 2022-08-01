@@ -73,10 +73,10 @@ export const Modal = ({id,title,url, modalState,setModalState}) => {
                                 }
                                 </div>
                             </div>
-                            <div className='close_button'><button  onClick={()=>setModalState(null)}><Close/></button></div>
+                            <div className='close_button'><button  data-testid='close' onClick={()=>setModalState(null)}><Close/></button></div>
                            
                         </div>
-                            <img className="modal_gif" src={url} alt={title}/>
+                            <img className="modal_gif" data-testid='gif' src={url} alt={title}/>
                     </div>
                 </motion.div>
                 </div>
